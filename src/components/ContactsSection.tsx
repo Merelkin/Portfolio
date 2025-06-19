@@ -6,8 +6,8 @@ import ContactForm from './ContactForm';
 import SocialLinks from './SocialLinks';
 
 const ContactsSection: React.FC = () => (
-  <footer id="contacts" className="section animate-fade-in" style={{ background: '#e3e8ee', borderRadius: '32px', marginTop: '2rem' }}>
-    <Container>
+
+    <Container id="contacts" className="section animate-fade-in" style={{ background: '#e3e8ee', borderRadius: '32px', marginTop: '2rem' }}>
       <Row className="justify-content-center">
         <Col md={6} className="text-center">
           <h2 className="section-title mb-4">Контакты</h2>
@@ -33,7 +33,7 @@ const ContactsSection: React.FC = () => (
         </Col>
       </Row>
     </Container>
-  </footer>
+
 );
 
 export default ContactsSection;

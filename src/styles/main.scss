@@ -487,3 +487,26 @@ body.dark-theme .btn-outline-secondary {
 .navbar-toggler {
   z-index: 1100;
 }
+
+// Footer styles
+.footer-custom {
+  background: linear-gradient(90deg, #f8fafc 0%, #e3e8ee 100%);
+  padding: 18px 0 12px 0;
+  font-size: 1.05rem;
+  color: #555;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
+  letter-spacing: 0.01em;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 0 !important;
+}
+.footer-custom .footer-copyright {
+  font-weight: 500;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+body.dark-theme .footer-custom {
+  background: linear-gradient(90deg, #232a34 0%, #1a1f25 100%);
+  color: #e0e6ed;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.18);
+  border-radius: 0 !important;
+}

@@ -6,6 +6,7 @@ import HobbiesSection from './components/HobbiesSection';
 import ExperienceSection from './components/ExperienceSection';
 import ContactsSection from './components/ContactsSection';
 import ScrollToTopButton from './components/ScrollToTopButton';
+import Footer from './components/Footer';
 import './styles/main.scss';
 
 function useFadeInOnScroll() {
@@ -61,6 +62,7 @@ function App() {
         </div>
       </main>
       <ScrollToTopButton />
+      <Footer />
     </div>
   );
 }
