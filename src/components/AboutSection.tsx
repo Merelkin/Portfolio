@@ -47,7 +47,7 @@ const AboutSection: React.FC = () => {
                   <FontAwesomeIcon icon={faLaughSquint} className="me-3 fs-3 text-danger" />
                   <span className="fw-bold about-label text-danger">Уникальный навык:</span>
                 </div>
-                <div className="about-info-text">Отличаю жб Fanta от пластиковой 😉</div>
+                <div className="about-info-text">Отличаю вкус жб Fanta от пластиковой 😉</div>
               </div>
 
             </div>
