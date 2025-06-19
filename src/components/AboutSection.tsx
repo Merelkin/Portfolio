@@ -1,7 +1,8 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGraduationCap, faAward, faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap, faAward, faLanguage, faLaughSquint } from '@fortawesome/free-solid-svg-icons';
+import { faSmile } from '@fortawesome/free-regular-svg-icons';
 
 const AboutSection: React.FC = () => {
   return (
@@ -30,7 +31,7 @@ const AboutSection: React.FC = () => {
                   <FontAwesomeIcon icon={faAward} className="me-3 fs-3 text-warning" />
                   <span className="fw-bold about-label">{"\u00A0"}{"\u00A0"}{"\u00A0"}{"\u00A0"}Достижения:</span>
                 </div>
-                <div className="about-info-text">{"\u00A0"}{"\u00A0"}Чемпион бариста Starbucks 2022 <br></br>{"\u00A0"}{"\u00A0"}IELTS - 5.5 (2019) </div>
+                <div className="about-info-text">{"\u00A0"}{"\u00A0"}Чемпион бариста Starbucks 2022 <br></br>{"\u00A0"}{"\u00A0"}IELTS - 5.5 (2019)<br></br>{"\u00A0"}{"\u00A0"}</div>
               </div>
               <div className="about-info-block">
                 <div className="d-flex align-items-center mb-2">
@@ -38,6 +39,19 @@ const AboutSection: React.FC = () => {
                   <span className="fw-bold about-label">Языки:</span>
                 </div>
                 <div className="about-info-text">{"\u00A0"}{"\u00A0"}Русский, Казахский, Английский</div>
+              </div>
+              <div className="about-info-block mb-4">
+                <div className="d-flex align-items-center mb-2">
+                  <FontAwesomeIcon icon={faSmile} className="me-3 fs-3 text-danger" />
+                  <span className="fw-bold about-label text-danger">Уникальный навык:</span>
+                </div>
+                <div className="about-info-text">Отличаю жб Fanta от пластиковой 😉</div>
+              </div>
+              <div className="about-info-block mb-4">
+                <div className="d-flex align-items-center mb-2">
+                  <FontAwesomeIcon icon={faLaughSquint} className="me-3 fs-3 text-warning" />
+                  <span className="fw-bold about-label text-warning">Люблю весёлые и необычные задачи!</span>
+                </div>
               </div>
             </div>
           </Col>
