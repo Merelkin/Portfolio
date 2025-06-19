@@ -1,0 +1,489 @@
+// Import Google Font
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+// Custom variables
+$primary-color: #ffffff;
+$secondary-color: #4f8cff;
+$accent-color: #00b894;
+$bg-light: #f7faff;
+$text-dark: #222f3e;
+
+// Import Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Custom font face
+@font-face {
+  font-family: 'Marmelad';
+  src: url('../../font/Marmelad.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Global styles
+body {
+  font-family: 'Manrope', Arial, sans-serif;
+  font-variant-numeric: lining-nums;
+  background: linear-gradient(120deg, #f7faff 0%, #e3f0ff 50%, #d0eaff 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease-in-out infinite;
+  color: $text-dark;
+  font-size: 1.13rem;
+  font-weight: 600;
+}
+
+// Smooth scroll behavior
+html {
+  scroll-behavior: smooth;
+}
+
+// Custom classes
+.section {
+  padding: 4rem 0 3rem 0;
+  background: $primary-color;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 32px 0 rgba(79,140,255,0.07);
+  transition: box-shadow 0.3s;
+  &-title {
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: $secondary-color;
+    letter-spacing: 1px;
+    text-align: center;
+    position: static;
+    &:after {
+      display: none;
+    }
+  }
+}
+
+// Fade in up animation
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.4,0,.2,1), transform 0.7s cubic-bezier(.4,0,.2,1);
+}
+.fade-in-up.visible {
+  opacity: 1;
+  transform: none;
+}
+
+// Custom card styles
+.custom-card {
+  background: #ffffff;
+  border: 1px solid #e3e8ee;
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 16px 0 rgba(79,140,255,0.06);
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s, transform 0.3s;
+  color: $text-dark;
+  border-left: none !important;
+  &:hover {
+    box-shadow: 0 8px 32px 0 rgba(79,140,255,0.13);
+    transform: translateY(-4px) scale(1.02);
+  }
+}
+
+// Card styles for hobby section
+.custom-card.hobby-card {
+  text-align: left;
+}
+
+// Custom button styles
+.btn-custom {
+  background: $secondary-color;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 0.8rem 2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  &:hover {
+    background: darken($secondary-color, 10%);
+    transform: translateY(-2px);
+  }
+}
+
+// Icon styles
+.icon-wrapper {
+  font-size: 2.2rem;
+  color: $secondary-color;
+  margin-bottom: 1rem;
+}
+.icon-wrapper, .custom-card .fa-icon, .custom-card svg {
+  transition: transform 0.2s, color 0.2s;
+}
+.icon-wrapper:hover, .custom-card .fa-icon:hover, .custom-card svg:hover {
+  transform: scale(1.18) rotate(-6deg);
+  color: #2563eb !important;
+}
+
+// Social links
+.social-link {
+  background: none !important;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  transition: transform 0.2s, color 0.2s;
+  &:hover {
+    background: none !important;
+    box-shadow: none;
+    color: #222f3e;
+    transform: scale(1.18) rotate(-8deg);
+    text-decoration: none;
+  }
+}
+
+// Animations
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+// Динамический фон (анимированный градиент)
+body {
+  font-family: 'Manrope', Arial, sans-serif;
+  font-variant-numeric: lining-nums;
+  background: linear-gradient(120deg, #c76c18 0%, #f7f9fb 50%, #c3f0e8 100%);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease-in-out infinite;
+  color: $text-dark;
+  font-size: 1.13rem;
+  font-weight: 600;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+// Адаптивность и выравнивание
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 0 1.5rem 0;
+    border-radius: 18px;
+  }
+  .custom-card {
+    padding: 1.2rem 0.7rem;
+    border-radius: 14px;
+  }
+}
+
+// Hero section styles
+.hero-section {
+  background: linear-gradient(120deg, #f7f9fb 60%, #e3e8ee 100%);
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 48px !important;
+  border-bottom-right-radius: 48px !important;
+  box-shadow: 0 8px 32px 0 rgba(79,140,255,0.07);
+  margin-bottom: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  .hero-avatar {
+    border: 6px solid #fff;
+    box-shadow: 0 4px 24px rgba(79,140,255,0.13);
+    background: #e3e8ee;
+  }
+  h1, h2 {
+    color: #222f3e;
+  }
+  .btn-custom {
+    font-size: 1.1rem;
+    padding: 0.7rem 2.2rem;
+    border-radius: 30px;
+    background: #4f8cff;
+    border: none;
+    box-shadow: 0 2px 8px 0 rgba(79,140,255,0.10);
+    &:hover {
+      background: #2563eb;
+    }
+  }
+  .btn-outline-primary {
+    border-radius: 30px;
+    font-size: 1.1rem;
+    border-width: 2px;
+  }
+  .fs-3 {
+    transition: color 0.2s;
+    &:hover {
+      color: #4f8cff;
+    }
+  }
+  .display-4 {
+    font-family: 'Marmelad', Arial, sans-serif;
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+  .lead, .h4, h2, p, .btn-custom {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+}
+
+// About section styles
+.about-info-block {
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+.about-info-block:last-child {
+  margin-bottom: 0;
+}
+.about-label {
+  font-size: 1.13rem;
+  min-width: 120px;
+  display: inline-block;
+}
+.about-info-text {
+  font-size: 1.13rem;
+  font-weight: 600;
+  margin-left: 2.7rem;
+  color: #222f3e;
+  line-height: 1.5;
+}
+
+// Ссылки без подчеркивания для email и телефона
+.text-dark[href^="mailto:"],
+.text-dark[href^="tel:"] {
+  text-decoration: none !important;
+}
+.text-dark[href^="mailto:"]:hover,
+.text-dark[href^="tel:"]:hover {
+  text-decoration: underline;
+}
+
+// Отключаем выделение текста в свободных областях
+body, .App, main, .section, .hero-section {
+  user-select: none;
+  caret-color: transparent;
+}
+
+// Но разрешаем выделение внутри input, textarea и при копировании ссылок
+input, textarea, a, .custom-card, .section-title, .navbar, .btn, .lead, .fw-bold, .text-secondary {
+  user-select: text;
+  caret-color: auto;
+}
+
+// Dark theme styles
+body.dark-theme {
+  background: #181a20;
+  color: #e0e3ea;
+}
+body.dark-theme .section,
+body.dark-theme .custom-card,
+body.dark-theme .hero-section,
+body.dark-theme .navbar,
+body.dark-theme footer {
+  background: #23272f !important;
+  color: #e0e3ea !important;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.18);
+  border-radius: 24px !important;
+}
+body.dark-theme .custom-card {
+  border: 1px solid #23272f;
+}
+body.dark-theme .section-title,
+body.dark-theme .fw-bold,
+body.dark-theme .lead,
+body.dark-theme .about-label,
+body.dark-theme .about-info-text {
+  color: #e0e3ea !important;
+}
+body.dark-theme .btn-custom {
+  background: #4f8cff;
+  color: #fff;
+}
+body.dark-theme .btn-outline-secondary {
+  border-color: #4f8cff;
+  color: #4f8cff;
+  background: transparent;
+}
+body.dark-theme .btn-outline-secondary:hover {
+  background: #4f8cff;
+  color: #fff;
+}
+body.dark-theme .text-secondary {
+  color: #b0b8c1 !important;
+}
+body.dark-theme a,
+body.dark-theme .about-info-text a,
+body.dark-theme .custom-card a {
+  color: #90caf9 !important;
+  text-decoration: none;
+}
+body.dark-theme .navbar {
+  background: rgba(35,39,47,0.97) !important;
+  border-radius: 0 0 24px 24px !important;
+}
+body.dark-theme .about-info-block {
+  background: transparent;
+}
+body.dark-theme .icon-wrapper {
+  color: #4f8cff !important;
+}
+body.dark-theme .hero-avatar {
+  border: 6px solid #23272f !important;
+}
+body.dark-theme .custom-card, body.dark-theme .section, body.dark-theme .hero-section, body.dark-theme footer {
+  border-radius: 24px !important;
+}
+body.dark-theme .custom-card, body.dark-theme .section, body.dark-theme .hero-section, body.dark-theme footer {
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.22);
+}
+body.dark-theme .about-info-block {
+  border-radius: 0;
+}
+body.dark-theme .App, body.dark-theme main {
+  background: #181a20 !important;
+}
+body.dark-theme .custom-card .about-info-text, body.dark-theme .custom-card .about-label {
+  color: #e0e3ea !important;
+}
+body.dark-theme .custom-card .about-info-text a {
+  color: #90caf9 !important;
+}
+body.dark-theme .custom-card .about-info-text {
+  font-weight: 700;
+}
+body.dark-theme .custom-card .about-label {
+  font-weight: 700;
+}
+body.dark-theme .custom-card .about-info-block {
+  background: transparent;
+}
+body.dark-theme .custom-card .about-info-block:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+body.dark-theme .custom-card .about-info-block:last-child {
+  margin-bottom: 0;
+}
+body.dark-theme .custom-card .about-info-block .about-info-text {
+  color: #e0e3ea !important;
+}
+body.dark-theme .custom-card .about-info-block .about-label {
+  color: #b0b8c1 !important;
+}
+body.dark-theme .custom-card .about-info-block .about-info-text a {
+  color: #90caf9 !important;
+}
+body.dark-theme .custom-card .about-info-block .about-info-text {
+  font-weight: 700;
+}
+body.dark-theme .custom-card .about-info-block .about-label {
+  font-weight: 700;
+}
+body.dark-theme .custom-card .about-info-block {
+  background: transparent;
+}
+body.dark-theme .custom-card .about-info-block:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+body.dark-theme .custom-card .about-info-block:last-child {
+  margin-bottom: 0;
+}
+body.dark-theme .custom-card .about-info-block .about-info-text {
+  color: #e0e3ea !important;
+}
+body.dark-theme .custom-card .about-info-block .about-label {
+  color: #b0b8c1 !important;
+}
+body.dark-theme .custom-card .about-info-block .about-info-text a {
+  color: #90caf9 !important;
+}
+body.dark-theme .custom-card .about-info-block .about-info-text {
+  font-weight: 700;
+}
+body.dark-theme .custom-card .about-info-block .about-label {
+  font-weight: 700;
+}
+body.dark-theme .custom-card .about-info-block {
+  background: transparent;
+}
+body.dark-theme .custom-card .about-info-block:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+body.dark-theme .custom-card .about-info-block:last-child {
+  margin-bottom: 0;
+}
+body.dark-theme .custom-card .about-info-block .about-info-text {
+  color: #e0e3ea !important;
+}
+body.dark-theme .custom-card .about-info-block .about-label {
+  color: #b0b8c1 !important;
+}
+body.dark-theme .custom-card .about-info-block .about-info-text a {
+  color: #90caf9 !important;
+}
+body.dark-theme .custom-card .about-info-block .about-info-text {
+  font-weight: 700;
+}
+body.dark-theme .custom-card .about-info-block .about-label {
+  font-weight: 700;
+}
+body.dark-theme .navbar {
+  border-radius: 0 !important;
+}
+.App {
+  background: $bg-light;
+  min-height: 100vh;
+}
+body.dark-theme .App {
+  background: #181a20 !important;
+}
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+// Убираем скругления у .hero-section, .navbar и всех .section:not(#about) для обеих тем
+.navbar,
+.hero-section,
+.section:not(#about),
+body.dark-theme .navbar,
+body.dark-theme .hero-section,
+body.dark-theme .section:not(#about) {
+  border-radius: 0 !important;
+}
+
+.section#about,
+.section#hobbies,
+.section#experience,
+.section#contacts,
+body.dark-theme .section#about,
+body.dark-theme .section#hobbies,
+body.dark-theme .section#experience,
+body.dark-theme .section#contacts {
+  border-radius: 24px !important;
+}
+body.dark-theme .btn,
+body.dark-theme .btn-custom,
+body.dark-theme .btn-outline-primary,
+body.dark-theme .btn-outline-secondary {
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+// Стили для видимости кнопки меню в тёмной теме
+.navbar-dark .navbar-toggler {
+  border-color: #fff !important;
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  z-index: 1100;
+}
