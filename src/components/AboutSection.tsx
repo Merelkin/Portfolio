@@ -41,7 +41,7 @@ const AboutSection: React.FC = () => {
               </div>
                  <div className="about-info-block mb-4">
                 <div className="d-flex align-items-center mb-2">
-                  <FontAwesomeIcon icon={faSmileWink} className="me-3 fs-3 text-danger" />
+                  <FontAwesomeIcon icon={faSmile} className="me-3 fs-3 text-danger" />
                   <span className="fw-bold about-label text-danger">Уникальный навык:</span>
                 </div>
                 <div className="about-info-text">Отличаю жб Fanta от пластиковой 😉</div>
