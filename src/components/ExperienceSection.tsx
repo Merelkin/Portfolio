@@ -13,7 +13,7 @@ const experience = [
 		place: 'Фрилансер',
 		position: 'Frontend/Web-разработчик',
 		description:
-			'Создание сайтов и веб-приложений, проекты на Tilda, Junior разработчик на Python, JS, Node.js, MySQL. Опыт с React, Next.js, PHP.',
+			'Создание сайтов и веб-приложений, проекты на Tilda, Junior разработчик на Python, JS, Node.js. Небольшой опыт работы с React, Next.js, PHP.',
 	},
 	{
 		period: 'Август 2024 — Октябрь 2024',
