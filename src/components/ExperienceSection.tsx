@@ -33,7 +33,7 @@ const experience = [
 		place: 'IceBar Amsterdam (Нидерланды)',
 		position: 'Junior Bartender',
 		description:
-			'Работа по программе обмена Ritz-Carlton Carriers, 3 месяца на позиции junior bartender в уникальном ледяном баре.',
+			'Работа по программе обмена, 3 месяца на позиции junior bartender в уникальном ледяном баре.',
 	},
 	{
 		period: 'Апрель 2023 — Сентябрь 2023',
