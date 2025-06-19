@@ -39,6 +39,13 @@ const AboutSection: React.FC = () => {
                 </div>
                 <div className="about-info-text">{"\u00A0"}{"\u00A0"}Русский, Казахский, Английский</div>
               </div>
+                 <div className="about-info-block mb-4">
+                <div className="d-flex align-items-center mb-2">
+                  <FontAwesomeIcon icon={faLaughSquint} className="me-3 fs-3 text-danger" />
+                  <span className="fw-bold about-label text-danger">Уникальный навык:</span>
+                </div>
+                <div className="about-info-text">Отличаю жб Fanta от пластиковой 😉</div>
+              </div>
             </div>
           </Col>
         </Row>
