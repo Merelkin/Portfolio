@@ -50,7 +50,6 @@ const AboutSection: React.FC = () => {
                   </div>
                   <div className="about-info-text">Отличаю жб Fanta от пластиковой 😉</div>
                 </div>
-        
               </div>
             </Col>
           </Row>
